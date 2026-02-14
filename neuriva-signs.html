@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEURIVA - A Sign from the Universe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(180deg, #1a237e 0%, #4a148c 50%, #6a1b9a 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Starry background */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .container {
+            max-width: 400px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 30px;
+            padding: 40px 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: #4dd0e1;
+            letter-spacing: 8px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        .story-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            color: #333;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .story-section h2 {
+            color: #6a1b9a;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .quote-container {
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .quote-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 240, 255, 0.95));
+            border-radius: 15px;
+            padding: 20px;
+            color: #333;
+            font-size: 15px;
+            line-height: 1.5;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+
+        .button {
+            width: 100%;
+            padding: 15px;
+            background: transparent;
+            border: 2px solid #4dd0e1;
+            border-radius: 25px;
+            color: #4dd0e1;
+            font-size: 14px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .button:hover {
+            background: #4dd0e1;
+            color: #1a237e;
+            transform: scale(1.05);
+        }
+
+        /* Brain decorations */
+        .brain-icon {
+            position: absolute;
+            font-size: 40px;
+            opacity: 0.3;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .brain-left {
+            top: 20%;
+            left: -20px;
+        }
+
+        .brain-right {
+            top: 60%;
+            right: -20px;
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+            .logo {
+                font-size: 28px;
+                letter-spacing: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Starry background -->
+    <div class="stars" id="stars"></div>
+
+    <div class="container">
+        <div class="brain-icon brain-left">🧠</div>
+        <div class="brain-icon brain-right">🧠</div>
+
+        <div class="logo">NEURIVA</div>
+        <div class="subtitle">A SIGN FROM THE UNIVERSE</div>
+
+        <div class="story-section">
+            <h2>Our Story</h2>
+            <p>
+                Our project began with a simple observation: stress has become one of the most common health challenges today, affecting concentration, emotional balance, and long-term well-being. Many people only realize how stressed they are when symptoms become severe, and most available solutions either depend on medication or require constant manual effort. We wanted to design a system that could detect stress early and respond automatically.
+            </p>
+            <p>
+                The idea was to create a closed-loop biofeedback system that continuously monitors physiological signals from the body, interprets them using machine learning, and applies a safe, non-pharmacological intervention to help restore balance. We focused on two important signals: brain activity and heart activity, because they reflect how the nervous system responds to stress in real time.
+            </p>
+            <p>
+                In our system, sensors measure these physiological signals and send them to a processing unit. Machine learning algorithms analyze the patterns and determine whether the person is entering a stressed state. Instead of only displaying the data, the system takes action: it activates transcutaneous vagus nerve stimulation, which helps activate the parasympathetic nervous system, promoting relaxation and reducing stress.
+            </p>
+            <p>
+                To make the system practical and user-friendly, we developed a real-time monitoring interface that allows stress levels to be visualized continuously. This provides both feedback to the user and validation of the system's effect, showing how stress levels decrease after intervention.
+            </p>
+            <p>
+                The final result is a complete closed-loop solution: detection, analysis, intervention, and monitoring, all working together automatically. Our project demonstrates how engineering, physiology, and artificial intelligence can be combined to create technology that not only measures the human body but actively helps improve well-being.
+            </p>
+        </div>
+
+        <div class="quote-container" id="quoteContainer"></div>
+
+        <button class="button" onclick="getNewSign()">RECEIVE ANOTHER SIGN</button>
+    </div>
+
+    <script>
+        // Array of 14 inspirational quotes
+        const quotes = [
+            "You don't need a perfect plan, you just need a first step.",
+            "Trust the Process.",
+            "What is meant to be will always find its way.",
+            "If you can dream it, you can do it.",
+            "You're on fire.",
+            "Avoid Slapping Stupid People.",
+            "Life is short, smile while you still have teeth.",
+            "Warning: you might be too cute for this app.",
+            "Stop being so pretty, it's exhausting for me to watch.",
+            "You look good today, or yesterday.. either way.",
+            "Socks disappear, but your smile doesn't have to.",
+            "If Plan 'A' didn't work, the alphabet has 25 more letters!",
+            "Sending my selfie to NASA because i'm a star.",
+            "Until it's done, tell none."
+        ];
+
+        let currentQuote = null;
+
+        // Create stars
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.width = Math.random() * 3 + 'px';
+                star.style.height = star.style.width;
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Get a random quote
+        function getRandomQuote() {
+            let newQuote;
+            do {
+                newQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            } while (newQuote === currentQuote && quotes.length > 1);
+            currentQuote = newQuote;
+            return newQuote;
+        }
+
+        // Display a new sign
+        function getNewSign() {
+            const container = document.getElementById('quoteContainer');
+            const quote = getRandomQuote();
+            
+            container.innerHTML = `
+                <div class="quote-card">
+                    ${quote}
+                </div>
+            `;
+        }
+
+        // Initialize on load
+        window.onload = function() {
+            createStars();
+            getNewSign();
+        };
+    </script>
+</body>
+</html>
